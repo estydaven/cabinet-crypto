@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperBody | Авторизация</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+      <div class="wrapper wrapper_login hero">
+        <section class="login-block">
+          <div class="container_hero">
+            <div class="header-test">
+              <img src="images/logo.svg" alt="">
+            </div>
+            <div class="login-block__wrap">
+              <div class="auth">
+                <h2 class="auth__title">Войти <br> в кабинет</h2>
+                <form action="#" id="auth-form" class="auth__form form-auth" method="post">
+                    <input type="text" class="form__field" placeholder="Логин" required>
+                    <input type="password" class="form__field" placeholder="Пароль" required>
+                    <div class="button-document">
+                      <div class="button-document__outer"></div>
+                      <button type="submit" class="button-document__btn">Войти</button>
+                    </div>
+                </form>
+                <div class="auth__error error">
+                    <picture class="error__icon">
+                        <img src="images/icons/error.svg" alt="">
+                    </picture>
+                    <p class="error__text">
+                        <strong class="error__text--marked">Ошибка</strong>
+                        введите логин или пароль
+                    </p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </section>
+      </div>
+</body>
+</html>
