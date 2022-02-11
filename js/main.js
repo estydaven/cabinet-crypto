@@ -49,19 +49,34 @@ $('#save-btn').click(function(e){
     e.preventDefault();
 });
 
-const editButtons = document.querySelectorAll('.edit_crypto');
-let cryptoWrapper = document.querySelectorAll('.crypto__wrap');
-let editWrapper = document.querySelectorAll('.editing');
+$('.edit_crypto').on('click', function() {
+    let editWrapper = $(this).parent().parent().parent().parent().find('.editing'),
+        cryptoWrapper = $(this).closest('.crypto__wrap');
+        
+        cryptoWrapper.addClass('hidden');
+        editWrapper.removeClass('hidden');        
+});
+$('.promotion__button_denied').on('click', function() {
+    let cryptoWrapper = $(this).parent().parent().parent().parent().find('.crypto__wrap'),
+        editWrapper = $(this).closest('.editing');
+        
+        cryptoWrapper.removeClass('hidden');
+        editWrapper.addClass('hidden');        
+});
 
-function editCrypto() {
-    cryptoWrapper.forEach((el) => {
-        el.style.display = 'none';
-    })
-    editWrapper.forEach((elem) => {
-        elem.style.display = 'block';
-    })
-}
-
-editButtons.forEach((el) => {
-    el.addEventListener('click', editCrypto);
-})
+$(document).ready(function () {  
+    $('.homework-hidden').hide();  
+    $(".show_hide").on("click", function () {
+        var txt = $(".homework-hidden").is(':visible') ? 'Правильный ответ' : 'Скрыть правильный ответ';
+        $(".show_hide").text(txt);
+        $('.homework-hidden').slideToggle(200);
+    });
+});
+$(document).ready(function () {  
+    $('.homework-hidden2').hide(); 
+    $(".show_hide2").on("click", function () {
+        var txt = $(".homework-hidden2").is(':visible') ? 'Правильный ответ' : 'Скрыть правильный ответ';
+        $(".show_hide2").text(txt);
+        $('.homework-hidden2').slideToggle(200);
+    });
+});

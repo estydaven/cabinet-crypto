@@ -637,7 +637,7 @@ template {
 	display: block;
 	width: 100%;
 	padding: 15px 0;
-	background: #EB4040;
+	background: #23255d;
 	background-size: 100%;
 	border-radius: 200px;
 	font-weight: bold;
@@ -652,11 +652,11 @@ template {
 	-o-transition: 0.5s;
 	transition: 0.5s;
 	text-decoration: none;
-	outline-color: #FE5487
+	outline: none
 }
 
 .btn:hover {
-	background: #c73f5f;
+	opacity: .7;
 }
 
 @media screen and (min-width: 768px) {
@@ -686,7 +686,20 @@ template {
 	background-color: #fff;
 	color: #3D3F85
 }
-
+.one-lesson__btn_download {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .3s linear;
+}
+.icon-download {
+	margin-right: 10px;
+	fill: #fff;
+	transition: all .3s linear;
+}
+.one-lesson__btn_download:hover .icon-download {
+	fill: #3D3F85;
+}
 .login-page {
 	position: relative;
 	display: -webkit-box;
@@ -2066,6 +2079,7 @@ border-radius: 30px;
 	  font-size: 13px;
 	  line-height: 20px;
 	  letter-spacing: 0.02em;
+	  font-weight: 300;
 	  color: #fff; }
 	  @media screen and (min-width: 1024px) {
 		.article-content p {
@@ -2073,11 +2087,40 @@ border-radius: 30px;
 		  padding-left: 30px;
 		  padding-right: 50px;
 		  font-size: 14px;
-		  line-height: 22px; } }
+		  line-height: 22px; font-weight: 300; } }
 		  .article-content ul {
 			padding-left: 30px;
 			padding-right: 50px;
 		  }
+	.lesson-table {
+		margin: 0 30px 20px 0;
+    border: 1px solid #fff;
+	}
+	.lesson-table__head {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		border-bottom: 1px solid #fff;
+	}
+	.lesson-table__title {
+		padding: 5px;
+		text-align: center;
+		border-bottom: 1px solid #fff;
+	}
+	.lesson-table__body {
+		display: flex;
+    flex-wrap: wrap;
+	}
+	.lesson-table__block {
+		width: calc(100% / 2);
+		padding: 5px;
+	}
+	.lesson-table__block_brdr {
+		border-right: 1px solid #fff;
+	}
+	.lesson-table__block_bor {
+		border-bottom: 1px solid #fff;
+	}
 	.article-content li {
 	  margin-bottom: 10px;
 	  font-size: 13px;
@@ -2175,7 +2218,25 @@ border-radius: 30px;
 .home-work--expand .work-lesson--ready {
 	padding-bottom: 20px
 }
-
+.work-lesson_content p {
+	font-weight: 300;
+}
+.work-lesson_content img {
+	max-width: 100%;
+}
+.work-lesson_content a {
+	color: #fff;
+	font-weight: 700;
+}
+.show_hide, .show_hide2 {
+	background-color: transparent;
+	padding: 5px;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.homework-btn {
+	margin: 10px 0;
+}
 .home-work__content {	
 	padding-bottom: 55px; 
 	display: none;
@@ -4529,6 +4590,9 @@ button {
 	.w-200 {
 		width: 108px;
 	}
+	.lesson-table {
+		margin: 0 20px 0 0;
+	}
 }
 @media (max-width: 480px) {
 	.preview__block {
@@ -4736,6 +4800,12 @@ button {
 	.preview__block_goal {
 		padding-right: 20px;
 	}
+	.lesson-table {
+		font-size: 13px;
+	}
+	.lesson-table p {
+		font-size: 12px;
+	}
 }
 @media (max-width: 375px) {
 	.header-test {
@@ -4837,4 +4907,8 @@ button {
 	.hero__wrapper {
 		background-size: 50%;
 	}
+}
+
+.highlight {
+	color: #000;
 }
