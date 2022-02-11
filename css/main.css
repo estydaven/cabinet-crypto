@@ -2144,10 +2144,10 @@ border-radius: 30px;
 	margin-top: 30px
 }
 .article-content img {
-	width: 100%;
+	width: auto;
     max-width: 100%;
-    margin: 0 auto 20px;
-    height: 489px;
+    margin: 0 0 20px 0;
+    height: auto;
     object-fit: cover;
 }
 .object-article {
